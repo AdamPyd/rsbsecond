@@ -13,4 +13,4 @@ const axiosUtil ={
     }
 }
 
-export default axiosUtil
+export default axiosUtil;
