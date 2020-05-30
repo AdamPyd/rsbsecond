@@ -41,7 +41,11 @@
   },
   "devDependencies": {
     "@ant-design/compatible": "^1.0.2",
+    "@types/history": "^4.7.6",
+    "@types/react-router-dom": "^5.1.5",
     "antd": "^4.2.5",
-    "dayjs": "^1.8.18"
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.18",
+    "react-router-dom": "^5.2.0"
   }
 }
