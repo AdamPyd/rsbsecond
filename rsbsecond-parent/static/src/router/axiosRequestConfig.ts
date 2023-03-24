@@ -5,31 +5,33 @@ const config={
    doLoginConfig:{
        method:'post',
        url:'/user/login',
-       port:8080,
+       // proxy:{
+       //     port:80,
+       // }
    },
    // 登录状态验证
    loginStateConfig:{
        method:'get',
        url:'/user/loginState',
-       proxy:{
-           port:8080,
-       }
+       // proxy:{
+       //     port:80,
+       // }
    },
    // 退出登录
    loginOutConfig:{
        method:'get',
        url:'/user/loginOut',
-       proxy:{
-           port:8080,
-       }
+       // proxy:{
+       //     port:80,
+       // }
    },
     // 测试请求
     testConfig:{
         method:'get',
         url:'/api/testController',
-        proxy:{
-            port:8080,
-        }
+        // proxy:{
+        //     port:80,
+        // }
     }
 }
 
