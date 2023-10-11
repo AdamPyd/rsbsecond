@@ -1,6 +1,12 @@
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
+/// <reference types="react-scripts" />
+
+// 1、用于 router 映射 url 链接
+declare module 'react-router-config';
+// 2、用于 router 映射 url 链接
+declare module 'react-router-dom';
 
 declare namespace NodeJS {
   interface ProcessEnv {

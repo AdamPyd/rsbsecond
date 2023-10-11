@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { Button } from 'antd'; //引入了ant design的图标和按钮
-import { Icon } from '@ant-design/compatible';
-import history from './router/history';
-import { renderRoutes } from "react-router-config";//引入了ant design的图标和按钮
-import routes from "./router";
-import axiosRequestConfig from './router/axiosRequestConfig'
-import axiosUtil from './router/axiosUtil'
-import logo from './logo.svg';
-import './App.css';
+import { Icon } from '@ant-design/compatible'; //引入了ant design的图标和按钮
+import history from '../router/history';
+import axiosRequestConfig from '../router/axiosRequestConfig'
+import axiosUtil from '../router/axiosUtil'
+import logo from '../logo.svg';
+import '../App.css';
 
 class App extends React.Component {
   constructor(props: any) {
@@ -37,7 +35,6 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-          {/*{ renderRoutes(routes) }*/}
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>

@@ -18,17 +18,18 @@ class Model extends React.Component {
 //   }
 
   componentDidMount() {
-    const loginStateConfig = requestConfig.loginStateConfig;
+    // const loginStateConfig = requestConfig.loginStateConfig;
+    const loginStateConfig = requestConfig.testConfig;
     const config = {
       param: { t: new Date().getTime() },
       callback: (response: any) => {
-        if (response.data.code === 0) {
+        if (response?.data) {
           history.push('/home');
         } else {
           history.push('/');
         }
       }
-    }
+    };
     const finalConfig = { ...loginStateConfig, ...config };
     utils.axiosMethod(finalConfig);
   }
