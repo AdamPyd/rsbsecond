@@ -7,7 +7,7 @@ import requestConfig from './router/axiosRequestConfig'
 import utils from './router/axiosUtil'
 
 // import './index.css';
-import App from './App';
+import App from './page/home/App';
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
@@ -45,7 +45,6 @@ class Model extends React.Component {
 
 ReactDOM.render(
   <Router history={history}>
-      <App />
       <Model />
     </Router>,
   document.getElementById('root') as HTMLElement

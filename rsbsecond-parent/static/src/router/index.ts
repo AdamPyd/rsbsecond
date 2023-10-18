@@ -1,6 +1,6 @@
 // router.js
 
-import App from '../components/App'
+import App from '../page/home/App'
 // import About from '../components/About'
 // import Other from '../components/Other'
 // import User from '../components/User'
