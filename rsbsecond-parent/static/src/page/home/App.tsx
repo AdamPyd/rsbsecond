@@ -2,8 +2,6 @@ import * as React from 'react';
 import { Button } from 'antd'; //引入了ant design的图标和按钮
 import { Icon } from '@ant-design/compatible';
 import history from '../../router/history';
-import { renderRoutes } from "react-router-config";//引入了ant design的图标和按钮
-import routes from "../../router";
 import axiosRequestConfig from '../../router/axiosRequestConfig'
 import axiosUtil from '../../router/axiosUtil'
 import logo from '../../logo.svg';

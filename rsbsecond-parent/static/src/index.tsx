@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 // import Login from './component/test/Login';
-import { Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import history from './router/history';
 import requestConfig from './router/axiosRequestConfig'
 import utils from './router/axiosUtil'
@@ -23,7 +23,17 @@ class Model extends React.Component {
     const config = {
       param: { t: new Date().getTime() },
       callback: (response: any) => {
-        if (response?.data) {
+        const location = window.location;
+        const hash = location?.hash;
+        const pathname = location?.pathname;
+        if (response?.data || hash) {
+          // 在走实际的 history.push 的时候，需要将带有 hash 前缀的 # 去掉
+          history.push(hash.replace('#', ''));
+        } else if (response?.data || pathname) {
+          // 若 hash 为空、pathname 不为空，则取 pathname
+          history.push('/home');
+        } else if (response?.data) {
+          // 若 hash、pathname 均为空，走首页
           history.push('/home');
         } else {
           history.push('/');
@@ -38,6 +48,7 @@ class Model extends React.Component {
     return (
       <div style={{ height: '100%' }}>
         <Route exact={true} path="/home" component={App} />
+        <Route exact={true} path="/a" component={App} />
       </div>
     )
   }
